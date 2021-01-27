@@ -1,0 +1,19 @@
+services:
+    VisualCraft\WorkQueue\Logger:
+        arguments:
+            - '@logger'
+        tags:
+            - { name: monolog.logger, channel: visual_craft_work_queue }
+
+    VisualCraft\Bundle\WorkQueueBundle\Command\ClearQueueCommand:
+        arguments:
+            - !tagged_locator { tag: 'visual_craft_work_queue.manager', index_by: 'key' }
+            - '%visual_craft_work_queue.queues%'
+        tags:
+            - { name: console.command }
+
+    VisualCraft\Bundle\WorkQueueBundle\Command\RunProcessorCommand:
+        arguments:
+            - !tagged_locator { tag: 'visual_craft_work_queue.processor', index_by: 'key' }
+        tags:
+            - { name: console.command }
