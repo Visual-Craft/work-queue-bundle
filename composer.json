@@ -2,7 +2,7 @@
     "name": "visual-craft/work-queue-bundle",
     "description": "Background jobs scheduling using Beanstalk (Symfony bundle)",
     "homepage": "https://github.com/Visual-Craft/work-queue-bundle",
-    "license": "proprietary",
+    "license": "MIT",
     "type": "symfony-bundle",
     "autoload": {
         "psr-4": { "VisualCraft\\Bundle\\WorkQueueBundle\\": "src/" }
