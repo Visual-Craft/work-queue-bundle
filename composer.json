@@ -9,9 +9,9 @@
     },
     "require": {
         "php": ">=7.4.0",
-        "symfony/framework-bundle": "~5.0",
-        "symfony/monolog-bundle": "~3.5",
-        "symfony/console": "~5.0",
+        "symfony/framework-bundle": "^5.0|^6.0",
+        "symfony/monolog-bundle": "^3.5",
+        "symfony/console": "^5.0|^6.0",
         "visual-craft/work-queue": "^0.1.0"
     }
 }
