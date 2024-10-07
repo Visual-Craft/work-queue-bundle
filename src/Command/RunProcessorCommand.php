@@ -12,6 +12,8 @@ use Symfony\Component\DependencyInjection\ServiceLocator;
 #[AsCommand(name: 'vc:work-queue:run')]
 class RunProcessorCommand extends Command
 {
+    protected static $defaultName = 'vc:work-queue:run';
+
     private ServiceLocator $managersLocator;
 
     public function __construct(ServiceLocator $managersLocator)

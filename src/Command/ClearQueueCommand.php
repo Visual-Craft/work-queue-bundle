@@ -2,6 +2,7 @@
 
 namespace VisualCraft\Bundle\WorkQueueBundle\Command;
 
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
@@ -12,6 +13,8 @@ use VisualCraft\WorkQueue\QueueManager;
 #[AsCommand(name: 'vc:work-queue:clear')]
 class ClearQueueCommand extends Command
 {
+    protected static $defaultName = 'vc:work-queue:clear';
+
     private ServiceLocator $managersLocator;
 
     private array $queues;
