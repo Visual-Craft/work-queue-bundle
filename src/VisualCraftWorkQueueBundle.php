@@ -8,7 +8,7 @@ use VisualCraft\Bundle\WorkQueueBundle\DependencyInjection\Compiler\RegisterWork
 
 class VisualCraftWorkQueueBundle extends Bundle
 {
-    public function build(ContainerBuilder $container)
+    public function build(ContainerBuilder $container): void
     {
         parent::build($container);
 

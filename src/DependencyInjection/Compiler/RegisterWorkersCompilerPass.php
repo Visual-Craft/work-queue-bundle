@@ -8,7 +8,7 @@ use Symfony\Component\DependencyInjection\Reference;
 
 class RegisterWorkersCompilerPass implements CompilerPassInterface
 {
-    public function process(ContainerBuilder $container)
+    public function process(ContainerBuilder $container): void
     {
         $workersMap = $container->getParameterBag()->get('visual_craft_work_queue.workers_map');
 

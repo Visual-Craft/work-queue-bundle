@@ -22,7 +22,7 @@ class RunProcessorCommand extends Command
         $this->managersLocator = $managersLocator;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName(self::$defaultName)
