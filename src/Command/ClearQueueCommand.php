@@ -26,7 +26,7 @@ class ClearQueueCommand extends Command
         $this->queues = $queues;
     }
 
-    protected function configure()
+    protected function configure(): void
     {
         $this
             ->setName(self::$defaultName)
